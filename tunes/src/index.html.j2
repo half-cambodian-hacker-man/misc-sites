@@ -1,0 +1,12 @@
+{% set title = "Tunes" %}
+{% set override_title = true %}
+{% extends "base.html.j2" %}
+
+{% block content %}
+  <h1>Tunes - Anthony Som</h1>
+  <p>Hi. Sometimes, I like to play music; this is a place where I put songs that I play.
+
+  <ul>{% for song in songs %}
+    <li>{{ song.date.isoformat() }}: <a href="{{ song.base_dir }}/">{{ song.title }} &ndash; {{ song.artist }}</a></li>
+  {% endfor %}</ul>
+{% endblock %}

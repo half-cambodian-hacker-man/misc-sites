@@ -1,0 +1,14 @@
+{% set title = song.title + " \u2013 " + song.artist %}
+{% extends "base.html.j2" %}
+
+{% block content %}
+  <main>
+    <a href="../../../">&lt;&lt;&lt; Back</a>
+    <br>
+
+    <h1>{{ song.title }} <small>by {{ song.artist }}</small></h1>
+    <audio controls>
+      <source src="./audio.mp3" type="audio/mp3">
+    </audio>
+  </main>
+{% endblock %}
